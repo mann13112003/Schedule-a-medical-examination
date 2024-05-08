@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './HomeHeader.scss';
+import logo from '../../assets/logo.svg';
 class HomeHeader extends Component {
 
     render() {
@@ -10,8 +11,8 @@ class HomeHeader extends Component {
                 <div className='home-header-container'>
                     <div className='home-header-content'>
                         <div className='left-content'>
-                            <i className="fas fa-bars"></i>
-                            <div className='header-logo'></div>
+                            <div><i className="fas fa-bars"></i></div>
+                            <div><img className='header-logo' src={logo} /></div>
                         </div>
 
                         <div className='center-content'>
@@ -40,7 +41,9 @@ class HomeHeader extends Component {
 
                         <div className='right-content'>
                             <div className='support'><i className="far fa-question-circle"></i>Hỗ trợ</div>
-                            <div className='flag'>VN</div>
+                            <div className='language-vi'>VN</div>
+                            <div className='language-en'>EN</div>
+
                         </div>
 
                     </div>
@@ -51,16 +54,40 @@ class HomeHeader extends Component {
                         <div className='title2'>CHĂM SÓC SỨC KHỎE TOÀN DIỆN</div>
                         <div className='search'>
                             <i className="fas fa-search"></i>
-                            <input type='text' placeholder='Tim chuyen khoa kham benh'></input>
+                            <input type='text' placeholder='Tìm chuyên khoa khám bệnh'></input>
                         </div>
                     </div>
                     <div className='content-down'>
                         <div className='options'>
                             <div className='option-child'>
                                 <div className='icon-child'><i className="far fa-hospital"></i></div>
-                                <div className='text-child'>Kham chuyen khoa</div>
+                                <div className='text-child'>Khám chuyên khoa</div>
                             </div>
-
+                        
+                            <div className='option-child'>
+                                <div className='icon-child'><i className="fas fa-mobile-alt"></i></div>
+                                <div className='text-child'>Khám từ xa</div>
+                            </div>
+                        
+                            <div className='option-child'>
+                                <div className='icon-child'><i className="fas fa-procedures"></i></div>
+                                <div className='text-child'>Khám tổng quát</div>
+                            </div>
+                        
+                            <div className='option-child'>
+                                <div className='icon-child'><i className="fas fa-flask"></i></div>
+                                <div className='text-child'>Xét nghiệm y học</div>
+                            </div>
+                        
+                            <div className='option-child'>
+                                <div className='icon-child'><i className="fas fa-user-md"></i></div>
+                                <div className='text-child'>Sức khỏe tinh thần</div>
+                            </div>
+                        
+                            <div className='option-child'>
+                                <div className='icon-child'><i className="fas fa-briefcase-medical"></i></div>
+                                <div className='text-child'>Khám nha khoa</div>
+                            </div>
                         </div>
                     </div>
                     
