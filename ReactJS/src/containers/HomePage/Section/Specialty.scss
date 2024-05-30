@@ -1,97 +1,66 @@
-.section-specialty{
-    height: 330px;
-    background: #f5f5f5;
-    // border: 1px solid red;
+// .section-specialty{
+//     height: 330px;
+//     background: #f5f5f5;
+//     // border: 1px solid red;
 
     
-    .specialty-container{
-        margin: 0 100px;
-        display: flex;
-        flex-direction: column;
-        .specialty-header{
-            height: 60px;
-            margin-bottom: 30px;
-            padding-top: 30px;
+//     .section-container{
+//         margin: 0 100px;
+//         display: flex;
+//         flex-direction: column;
+//         .section-header{
+//             height: 60px;
+//             margin-bottom: 30px;
+//             padding-top: 30px;
 
-            .title-section{
-                font-size: 25px;
-                font-weight: 600;
+//             .title-section{
+//                 font-size: 25px;
+//                 font-weight: 600;
 
-            }
-            .btn-section{
-                float: right;
-                display: block;
-                padding: 10px 15px;
-                border: none;
-                outline: none;
-                background: #ebebeb;
-                color: black;
-                cursor: pointer;
-                text-transform: uppercase;
-                &:hover{
-                    color:#fff;
-                    background: rgb(207, 207, 48);
-                }
+//             }
+//             .btn-section{
+//                 float: right;
+//                 display: block;
+//                 padding: 10px 15px;
+//                 border: none;
+//                 outline: none;
+//                 background: #ebebeb;
+//                 color: black;
+//                 cursor: pointer;
+//                 text-transform: uppercase;
+//                 &:hover{
+//                     color:#fff;
+//                     background: rgb(207, 207, 48);
+//                 }
 
-            }
-        }
-        .specialty-body{
-            // border: 1px solid black;
+//             }
+//         }
+//         .section-body{
+//             // border: 1px solid black;
 
-            .specailty-customize{
-                // border: 1px solid #cac9c9;
-                .bg-image{
+//             .specialty-customize{
+//                 // border: 1px solid #cac9c9;
+//                 .bg-image{
                     
-                    width: 278px;
-                    height: 150px;
-                    background: url(../../../assets/specialty/101627-co-xuong-khop.png);
-                    background-position: center center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-color: #d7d7d7;
+//                     width: 278px;
+//                     height: 150px;
+//                     background: url(../../../assets/specialty/101627-co-xuong-khop.png);
+//                     background-position: center center;
+//                     background-repeat: no-repeat;
+//                     background-size: cover;
+//                     background-color: #d7d7d7;
 
-                }
-            }
+//                 }
+//             }
 
 
-            .slick-prev{
-    
-    
-                left: -10px !important;
-                z-index: 1000 !important;
-                height: 48px !important;
-                width: 44px !important;
-                
-                background: #fff !important;
-                border: 2px solid #d7d7d7 !important;
-                &:hover{
-                    background: #e7e6e6 !important;
-                }
-            }
             
-            .slick-prev::before ,.slick-next::before{
-                font-family: FontAwesome !important;
-                // content: "\f060" !important;
-                color: red !important;
-            }
-            
-            .slick-next{
-                right: -10px !important;
-                height: 48px !important;
-                width: 44px !important;
-            
-                background: #fff !important;
-                border: 2px solid #d7d7d7 !important;
-                &:hover{
-                    background: #e7e6e6 !important;
-                }
-            }
-        }
+//         }
 
-    }
+//     }
 
-}
-//reser slick slider css
+// }
+// //reser slick slider css
 
 
 
