@@ -19,7 +19,7 @@ let initWebRouter = (app) => {
     router.put('/api/edit-user', userController.handleEditUser);
     router.delete('/api/delete-user', userController.handleDeleteUser);
 
-    router.get('/allcode',userController.getAllCode),
+    router.get('/api/allcode',userController.getAllCode),
     router.get('/hoidanit',(req,res) => {
         return res.send('Hello world with hoidanit')
     })
