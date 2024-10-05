@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { LANGUAGES } from '../../../utils/constant';
-import * as actions from '../../../store/actions'
+import * as actions from '../../../store/actions';
 import './UserRedux.scss';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
+import TableManageUser from './TableManageUser';
 class UserRedux extends Component {
     constructor(props){
         super(props);
@@ -186,9 +187,7 @@ class UserRedux extends Component {
                                         return(
                                             <option key = {index} selected value={item.key}>{language === LANGUAGES.VI ? item.valueVi : item.valueEn}</option>
                                         )
-
                                     })}
-                                    
                                 </select>
                             </div>
                             <div className='col-3'>
@@ -198,7 +197,6 @@ class UserRedux extends Component {
                                         return(
                                             <option key = {index} selected value={item.key}>{language === LANGUAGES.VI ? item.valueVi : item.valueEn}</option>
                                         )
-
                                     })}
                                 </select>
                             </div>
@@ -222,19 +220,19 @@ class UserRedux extends Component {
                                     style={{backgroundImage:`url(${this.state.previewImgURL})`}}
                                     onClick={() => {this.OpenPreviewImage()}}></div>
                                 </div>
-                                
                             </div>
-                            <div className='col-12 mt-3'>
+                            <div className='col-12 my-3'>
                                 <button className='btn btn-primary'
                                 onClick={()=>{this.handleSaveUser()}}
                                 ><FormattedMessage id = "manage-user.save"/></button>
                             </div>
-                            
-
+                            <div className='col-12'>
+                                <TableManageUser></TableManageUser>
+                            </div>
                         </div>
-                        
                     </div>
                 </div>
+                
                 {this.state.isOpen === true && 
                     <Lightbox
                         mainSrc={this.state.previewImgURL}
