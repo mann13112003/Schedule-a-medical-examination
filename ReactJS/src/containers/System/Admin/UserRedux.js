@@ -16,6 +16,8 @@ class UserRedux extends Component {
             roleArr:[],
             previewImgURL:'',
             isOpen:false,
+            
+
             email: '',
             password: '',
             firstName: '',
@@ -72,6 +74,20 @@ class UserRedux extends Component {
                 role:arrRoles && arrRoles.length>0 ? arrRoles[0].key : ''
             })
         }
+        if(prevProps.listUsers !== this.props.listUsers){
+            this.setState({
+                email: '',
+                password: '',
+                firstName: '',
+                lastName: '',
+                phoneNumber: '',
+                address: '',
+                gender: '',
+                position: '',
+                role: '',
+                avatar: '',
+            })
+        }
     }
 
     handleOnchangeImage = (event)=>{
@@ -119,7 +135,7 @@ class UserRedux extends Component {
             roleId: this.state.role,
             positionId:this.state.position,
         })
-
+        
         //fire redux action 
         console.log('before check',this.state)
     }
@@ -226,7 +242,7 @@ class UserRedux extends Component {
                                 onClick={()=>{this.handleSaveUser()}}
                                 ><FormattedMessage id = "manage-user.save"/></button>
                             </div>
-                            <div className='col-12'>
+                            <div className='col-12 mb-5'>
                                 <TableManageUser></TableManageUser>
                             </div>
                         </div>
@@ -255,6 +271,7 @@ const mapStateToProps = state => {
         positionRedux: state.admin.positions,
         roleRedux: state.admin.roles,
         isLoadingGender: state.admin.isLoadingGender,
+        listUsers: state.admin.users,
     };
 };
 
@@ -266,7 +283,9 @@ const mapDispatchToProps = dispatch => {
 
         getRoleStart:() => dispatch(actions.fetchRoleStart()),
 
-        createNewUser:(data) => dispatch(actions.createNewUser(data))
+        createNewUser:(data) => dispatch(actions.createNewUser(data)),
+
+        fetchUserRedux: () => dispatch(actions.fetchAllUsersStart()),
         // processLogout: () => dispatch(actions.processLogout()),
         // changeLanguageAppRedux: (language) => dispatch(actions.changeLanguageApp(language))
 
