@@ -22,6 +22,9 @@ let initWebRouter = (app) => {
     router.get('/api/allcode',userController.getAllCode),
 
     router.get('/api/top-doctor-home',doctorController.getTopDoctorHome),
+    router.get('/api/get-all-doctor',doctorController.getAllDoctor),
+    router.post('/api/save-infor-doctors',doctorController.postInforDoctor),
+    router.get('/api/get-detail-doctor-by-id',doctorController.getDetailDoctorById),
     router.get('/hoidanit',(req,res) => {
         return res.send('Hello world with hoidanit')
     })
